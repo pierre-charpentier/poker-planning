@@ -6,12 +6,13 @@ export type DBSchema = {
   user: {
     id: string;
     name: string;
-    rooms: ReadonlyArray<DBSchema["room"]["id"]>;
+    rooms: Array<DBSchema["room"]>;
   };
   room: {
     id: string;
     name: string;
-    pokers: ReadonlyArray<DBSchema["poker"]["id"]>;
+    pokers: Array<DBSchema["poker"]>;
+    users: Array<DBSchema["user"]>;
   };
   poker: {
     id: string;
